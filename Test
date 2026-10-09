@@ -1,1 +1,13 @@
+# Test Record
+
+| Test | Expected Result | Actual Result |
+|---|---|---|
+| OvenPlan with Demo Dish | Returns 3 instructions | Passed |
+| StovetopPlan with Demo Dish | Returns 3 instructions | Passed |
+| CampingPlan with Demo Dish | Returns 3 instructions | Passed |
+| Trail Meal name | Instructions use Trail Meal | Passed |
+| Repeated cook() calls | Same instructions each time | Passed |
+| Empty dish name | Throws IllegalArgumentException | Passed |
+| Whitespace-only dish name | Throws IllegalArgumentException | Passed |
+| Instantiate CookingPlan directly | Compilation fails | Passed |
 
