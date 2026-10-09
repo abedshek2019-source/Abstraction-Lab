@@ -1,38 +1,46 @@
 # Abstraction-Lab
-## Overview
 
-This project demonstrates abstraction and polymorphism in Java. It uses an abstract `CookingPlan` class and three subclasses: `OvenPlan`, `StovetopPlan`, and `CampingPlan`.
+## Running Instructions
 
-Each subclass has its own `cook()` method that returns three cooking instructions. The `RecipeApp` uses `showPlan(CookingPlan plan)` to display any cooking plan.
-
-## How to Run
-
-Compile the Java files:
+Compile and run the program from the project folder:
 
 ```bash
 javac src/*.java
-```
-
-Run the program:
-
-```bash
 java -cp src RecipeApp
 ```
 
-## Testing
+## Sample Output
 
-The program tests all three cooking plans with `Demo Dish`. It also tests `Trail Meal`, repeated calls to `cook()`, and rejection of empty or whitespace-only dish names.
+```text
+Dish: Demo Dish
+Prepare the oven and baking dish.
+Place Demo Dish in the baking dish.
+Bake using the recipe's oven instructions.
 
-The abstract `CookingPlan` class cannot be instantiated directly, which is tested separately.
+Dish: Demo Dish
+Prepare the stovetop and pan.
+Place Demo Dish in the pan.
+Cook using the recipe's stovetop instructions.
 
-## UML Diagram
+Dish: Demo Dish
+Prepare the portable stove and camping pot.
+Place Demo Dish in the camping pot.
+Cook using the recipe's portable-stove instructions.
 
-The class diagram shows `CookingPlan` and its three subclasses. Each subclass inherits from `CookingPlan` and implements its own `cook()` method.
+Dish: Trail Meal
+Prepare the oven and baking dish.
+Place Trail Meal in the baking dish.
+Bake using the recipe's oven instructions.
 
-## Adding Another Cooking Plan
+Repeated calls match: true
+Empty name rejected.
+Whitespace name rejected.
+```
 
-To add an `AirFryerPlan`, I would create a new class that extends `CookingPlan` and overrides `cook()`. The existing `showPlan()` method would still work without changes because it accepts a `CookingPlan` object.
+## Pathway Explanation
 
-## Connection to My Basketball Training Tracker
+The program uses an abstract `CookingPlan` class as a shared contract. `OvenPlan`, `StovetopPlan`, and `CampingPlan` extend it and each provide their own `cook()` method. The `showPlan(CookingPlan plan)` method works with any subclass without needing to check its type.
 
-My basketball training tracker could use an abstract `TrainingPlan` class with subclasses such as `ShootingPlan`, `DefensePlan`, and `ConditioningPlan`. Each subclass could provide different training instructions while using one shared method to display them.
+## Possible Abstraction in My Current Project
+
+In my basketball training tracker, I could create an abstract `TrainingPlan` class with subclasses such as `ShootingPlan`, `DefensePlan`, and `ConditioningPlan`. Each subclass could provide different training instructions while the program uses one shared method to display them.
