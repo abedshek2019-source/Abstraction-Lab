@@ -46,4 +46,4 @@ The program uses an abstract `CookingPlan` class as a shared contract. `OvenPlan
 In my basketball training tracker, I could create an abstract `TrainingPlan` class with subclasses such as `ShootingPlan`, `DefensePlan`, and `ConditioningPlan`. Each subclass could provide different training instructions while the program uses one shared method to display them.
 ## UML Diagram
 
-![UML Class Diagram](planning/cooking_plan_uml(1).png)
+![UML Class Diagram](cooking_plan_uml(1).png)
